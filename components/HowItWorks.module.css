@@ -1,0 +1,135 @@
+.section {
+    padding: 5rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 64rem;
+    /* 5xl */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.25rem;
+    /* 4xl */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    /* xl */
+    color: #9ca3af;
+    /* gray-400 */
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 42rem;
+    /* 2xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.numberContainer {
+    flex-shrink: 0;
+}
+
+.numberCircle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 9999px;
+    background-color: #2563eb;
+    /* blue-600 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    /* 2xl */
+    font-weight: 700;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #2a2a2a;
+    width: 100%;
+}
+
+.stepTitle {
+    font-size: 1.5rem;
+    /* 2xl */
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.stepDescription {
+    color: #9ca3af;
+    /* gray-400 */
+    font-size: 1.125rem;
+    /* lg */
+    line-height: 1.625;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+    .section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        /* 5xl */
+    }
+
+    .step {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

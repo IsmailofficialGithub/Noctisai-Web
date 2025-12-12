@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Noctisai - Landing Page
+
+A modern, responsive Next.js landing page for the Noctisai Windows desktop application.
+
+## About
+
+This is the official download page for Noctisai, a Windows-native desktop application for private, secure AI chat with zero-knowledge encryption and screen-sharing protection.
+
+## Tech Stack
+
+- **Next.js 16+** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **React 19**
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── layout.tsx          # Root layout with SEO metadata
+│   ├── page.tsx            # Main landing page
+│   └── globals.css         # Global styles and animations
+├── components/
+│   ├── Hero.tsx            # Hero section
+│   ├── Features.tsx        # Features grid
+│   ├── HowItWorks.tsx      # Step-by-step guide
+│   ├── Download.tsx        # Download section
+│   ├── Links.tsx           # Social links
+│   └── Privacy.tsx         # Privacy & Security section
+└── public/                 # Static assets
+```
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+### Update Placeholder URLs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Before deploying, update the following placeholder URLs:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Download URL** (`components/Download.tsx`):
+   - Current: `/downloads/Noctisai-Setup.exe`
+   - Update to your actual installer URL (GitHub Releases, CDN, etc.)
 
-## Deploy on Vercel
+2. **GitHub Repository** (`components/Links.tsx`):
+   - Current: `https://github.com/yourusername/noctisai`
+   - Update with your actual repository URL
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Social Media Links** (`components/Links.tsx`):
+   - Update Twitter/X and LinkedIn URLs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **SEO Metadata** (`app/layout.tsx`):
+   - Update `metadataBase` and `openGraph.url` with your actual domain
+   - Update Twitter handle in `twitter.creator`
+
+## Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+To start the production server:
+
+```bash
+npm start
+```
+
+## Features
+
+- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ Dark mode theme
+- ✅ Smooth animations and transitions
+- ✅ SEO optimized with proper meta tags
+- ✅ Accessible and semantic HTML
+- ✅ Modern, professional design
+
+## Deployment
+
+This Next.js app can be deployed on:
+
+- [Vercel](https://vercel.com) (recommended)
+- [Netlify](https://netlify.com)
+- Any platform that supports Next.js
+
+## License
+
+Private property - All rights reserved.

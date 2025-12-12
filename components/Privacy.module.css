@@ -1,0 +1,134 @@
+.section {
+    padding: 5rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 56rem;
+    /* 4xl */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.25rem;
+    /* 4xl */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    /* xl */
+    color: #9ca3af;
+    /* gray-400 */
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 42rem;
+    /* 2xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon {
+    width: 2.5rem;
+    /* 10 */
+    height: 2.5rem;
+    /* 10 */
+    color: #3b82f6;
+    /* blue-500 */
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    /* 2xl */
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+.cardDescription {
+    color: #9ca3af;
+    /* gray-400 */
+    line-height: 1.625;
+}
+
+.trustBox {
+    margin-top: 3rem;
+    background: linear-gradient(to right, rgba(30, 58, 138, 0.2), rgba(88, 28, 135, 0.2));
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    max-width: 56rem;
+    /* 4xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trustText {
+    font-size: 1.125rem;
+    /* lg */
+    color: #d1d5db;
+    /* gray-300 */
+    line-height: 1.625;
+}
+
+.strongText {
+    color: white;
+    font-weight: 700;
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+    .section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        /* 5xl */
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
