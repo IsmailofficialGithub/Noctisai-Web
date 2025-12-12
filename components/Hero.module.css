@@ -38,6 +38,19 @@
     animation: fade-in 1s ease-out;
 }
 
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    max-height: 250px;
+    filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3));
+}
+
 .title {
     font-size: 3rem;
     /* 5xl */
