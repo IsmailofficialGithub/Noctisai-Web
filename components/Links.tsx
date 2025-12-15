@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin, Globe } from "lucide-react";
 import styles from './Links.module.css';
 
 export default function Links() {
@@ -6,17 +6,17 @@ export default function Links() {
     const links = [
         {
             name: "GitHub",
-            url: "https://github.com/yourusername/noctisai",
+            url: "https://github.com/IsmailofficialGithub/",
             icon: Github,
         },
         {
-            name: "Twitter/X",
-            url: "https://twitter.com/yourusername",
-            icon: Twitter,
+            name: "Portfolio",
+            url: "https://www.ismailabbasi.qzz.io/",
+            icon: Globe,
         },
         {
             name: "LinkedIn",
-            url: "https://linkedin.com/company/yourcompany",
+            url: "https://www.linkedin.com/in/ismailabbasi/",
             icon: Linkedin,
         },
     ];
