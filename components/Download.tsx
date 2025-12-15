@@ -7,7 +7,7 @@ export default function Download() {
     // - GitHub Releases: https://github.com/yourusername/noctisai/releases/latest/download/Noctisai-Setup.exe
     // - CDN/File hosting: Your CDN URL here
     // - Custom download server: Your server URL here
-    const downloadUrl = "/downloads/Noctisai-Setup.exe";
+    const downloadUrl = "https://github.com/IsmailofficialGithub/Noctisai-Web/releases/download/release/Noctisai.Setup.1.0.0.exe";
 
     return (
         <section id="download" className={styles.section}>
