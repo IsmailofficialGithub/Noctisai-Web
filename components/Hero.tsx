@@ -17,8 +17,8 @@ export default function Hero() {
                     <Image
                         src="/logo-neon.png"
                         alt="Noctisai Logo"
-                        width={200}
-                        height={200}
+                        width={120}
+                        height={120}
                         priority
                         className={styles.logo}
                     />
