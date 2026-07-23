@@ -28,11 +28,11 @@ export default function Hero() {
                 </h1>
 
                 <p className={styles.subtitle}>
-                    Secure AI Chat with Screen-Sharing Protection
+                    A stealthy, secure, and advanced AI assistant for interviews & meetings.
                 </p>
 
                 <p className={styles.description}>
-                    A Windows-native desktop application for private, secure AI conversations with zero-knowledge encryption and protection from screen sharing tools.
+                    A desktop application for private, secure AI conversations with zero-knowledge encryption, stealth display modes, and undetectable operation. Now available on Windows and Linux!
                 </p>
 
                 <div className={styles.buttonContainer}>
@@ -40,12 +40,12 @@ export default function Hero() {
                         href="#download"
                         className={styles.button}
                     >
-                        Download for Windows
+                        Download for Windows & Linux
                     </a>
                 </div>
 
                 <p className={styles.footer}>
-                    Windows 10/11 • x64 • 100MB+
+                    Windows (exe) • Linux (AppImage, deb)
                 </p>
             </div>
         </section>

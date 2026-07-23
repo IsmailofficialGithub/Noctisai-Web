@@ -1,41 +1,51 @@
-import { Lock, Shield, Bot, Key, LockKeyhole, Zap, Moon } from "lucide-react";
+import { Lock, Shield, Bot, EyeOff, Mic, Keyboard, ScanText, AppWindow, Users } from "lucide-react";
 import styles from './Features.module.css';
 
 const features = [
   {
-    title: "Zero-Knowledge Encryption",
-    description: "All chat logs and API keys encrypted with AES-256-GCM. Even we can't access your data.",
-    icon: Lock,
+    title: "Privacy & Stealth",
+    description: "Undetectable presence hidden from taskbar and task manager. Global stealth shortcut (Ctrl+Alt+H) to hide instantly.",
+    icon: EyeOff,
   },
   {
-    title: "Screen Sharing Protection",
-    description: "Prevents content capture in video calls. Your conversations stay private even when sharing your screen.",
-    icon: Shield,
+    title: "Ghost Typer (Humanizer)",
+    description: "Physically simulates human typing with variable speeds and 'fat finger' mistakes to bypass copy-paste detection.",
+    icon: Keyboard,
   },
   {
-    title: "Multi-LLM Support",
-    description: "Works with OpenAI GPT-3.5/4, Ollama local models, and any OpenAI-compatible API endpoint.",
+    title: "Real-Time Voice Transcription",
+    description: "Capture your mic (Mine Mode) or system audio (Yours Mode) using Whisper for real-time AI context.",
+    icon: Mic,
+  },
+  {
+    title: "Transparent OCR Overlay",
+    description: "Extract text seamlessly using a transparent overlay window. Perfect for uncopiable screens (Ctrl+Alt+O).",
+    icon: ScanText,
+  },
+  {
+    title: "Multi-Model Support",
+    description: "Integrated with OpenAI (GPT-4/3.5), Groq (Llama 3, Mixtral), and OpenAI-compatible APIs like Ollama.",
     icon: Bot,
   },
   {
-    title: "Secure Authentication",
-    description: "Master password protection with PBKDF2 key derivation. Your data is locked behind strong encryption.",
-    icon: Key,
+    title: "Zero-Knowledge Encryption",
+    description: "All chats and API keys are encrypted locally using AES-256-GCM. We never see your data.",
+    icon: Lock,
   },
   {
-    title: "Privacy First",
-    description: "No telemetry, no cloud storage. All data stays local on your computer. Complete privacy guaranteed.",
-    icon: LockKeyhole,
+    title: "Content Protection",
+    description: "Native OS-level protection prevents screenshots and screen recording of the app window. Auto-hides on screen sharing.",
+    icon: Shield,
   },
   {
-    title: "System Tray Integration",
-    description: "Hide or show the app instantly with CTRL+SHIFT+H hotkey. Quick access from your system tray.",
-    icon: Zap,
+    title: "Advanced Window Management",
+    description: "Always-on-top, keyboard-controlled resizing and positioning, plus desktop app embedding capabilities.",
+    icon: AppWindow,
   },
   {
-    title: "Dark Mode UI",
-    description: "Beautiful, modern dark interface designed for comfortable extended use and reduced eye strain.",
-    icon: Moon,
+    title: "Multiple Chat Contexts",
+    description: "Create separate chat sessions with custom context for different scenarios (interviews, meetings, coding, etc.).",
+    icon: Users,
   },
 ];
 

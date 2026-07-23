@@ -21,8 +21,7 @@ export default function Privacy() {
                             Zero-Knowledge Encryption
                         </h3>
                         <p className={styles.cardDescription}>
-                            All your chat logs and API keys are encrypted with AES-256-GCM.
-                            We use zero-knowledge architecture, meaning even we cannot access your data.
+                            All chats and API keys are encrypted at rest using AES-256-GCM with PBKDF2 key derivation. We use zero-knowledge architecture, meaning even we cannot access your data.
                         </p>
                     </div>
 
@@ -60,8 +59,7 @@ export default function Privacy() {
                             Screen Sharing Protection
                         </h3>
                         <p className={styles.cardDescription}>
-                            Advanced protection prevents screen capture tools from recording your conversations.
-                            Stay private even during video calls.
+                            Advanced OS-level process masking and content protection prevents screen capture tools (like Zoom, Teams, OBS) from recording your conversations.
                         </p>
                     </div>
                 </div>

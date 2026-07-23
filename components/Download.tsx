@@ -1,33 +1,94 @@
-import { Download as DownloadIcon, CheckCircle2 } from "lucide-react";
+import { Download as DownloadIcon, CheckCircle2, Github, FileBox } from "lucide-react";
 import styles from './Download.module.css';
 
-export default function Download() {
-    // TODO: Update this URL when the installer is available
-    // Options:
-    // - GitHub Releases: https://github.com/yourusername/noctisai/releases/latest/download/Noctisai-Setup.exe
-    // - CDN/File hosting: Your CDN URL here
-    // - Custom download server: Your server URL here
-    const downloadUrl = "https://github.com/IsmailofficialGithub/Noctisai-Web/releases/download/release/Noctisai.Setup.1.0.0.exe";
+async function getReleases() {
+    try {
+        const res = await fetch('https://api.github.com/repos/IsmailofficialGithub/interview-cracker/releases', {
+            next: { revalidate: 3600 }
+        });
+        if (!res.ok) return [];
+        return res.json();
+    } catch (error) {
+        console.error('Error fetching releases:', error);
+        return [];
+    }
+}
+
+export default async function Download() {
+    const releases = await getReleases();
 
     return (
         <section id="download" className={styles.section}>
             <div className={styles.container}>
                 <h2 className={styles.title}>
-                    Download Noctisai
+                    Download Releases
                 </h2>
                 <p className={styles.subtitle}>
-                    Get the Windows desktop application and start having secure, private AI conversations today.
+                    Get the latest application releases and start using our tool today.
                 </p>
 
-                <div className={styles.buttonContainer}>
-                    <a
-                        href={downloadUrl}
-                        download
-                        className={styles.downloadButton}
-                    >
-                        <DownloadIcon className="w-6 h-6" />
-                        Download for Windows
-                    </a>
+                <div className={styles.releasesContainer}>
+                    {releases.length === 0 ? (
+                        <p className={styles.noReleases}>No releases found.</p>
+                    ) : (
+                        releases.map((release: any) => (
+                            <div key={release.id} className={styles.releaseCard}>
+                                <div className={styles.releaseHeader}>
+                                    <h3 className={styles.releaseName}>
+                                        {release.name || release.tag_name}
+                                        {release.prerelease && (
+                                            <span className={styles.prereleaseBadge}>Pre-release</span>
+                                        )}
+                                    </h3>
+                                    <span className={styles.releaseDate}>
+                                        {new Date(release.published_at).toLocaleDateString()}
+                                    </span>
+                                </div>
+                                
+                                {release.body && (
+                                    <div className={styles.releaseNotes}>
+                                        {release.body}
+                                    </div>
+                                )}
+                                
+                                <div className={styles.assetsList}>
+                                    {release.assets?.length > 0 ? (
+                                        release.assets.map((asset: any) => (
+                                            <a
+                                                key={asset.id}
+                                                href={asset.browser_download_url}
+                                                download
+                                                className={styles.downloadAssetButton}
+                                            >
+                                                <DownloadIcon className="w-5 h-5" />
+                                                Download {asset.name}
+                                            </a>
+                                        ))
+                                    ) : (
+                                        <>
+                                            <a
+                                                href={release.zipball_url}
+                                                className={styles.downloadAssetButton}
+                                            >
+                                                <FileBox className="w-5 h-5" />
+                                                Source Code (zip)
+                                            </a>
+                                        </>
+                                    )}
+                                    
+                                    <a 
+                                        href={release.html_url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={styles.githubButton}
+                                    >
+                                        <Github className="w-5 h-5" />
+                                        View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        ))
+                    )}
                 </div>
 
                 <div className={styles.requirementsBox}>

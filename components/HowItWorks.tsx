@@ -4,27 +4,27 @@ const steps = [
   {
     number: "1",
     title: "Download and Install",
-    description: "Download the Windows installer from this page and run the setup file. The installation takes just a minute.",
+    description: "Get the latest binary installer (Windows .exe or Linux .AppImage/.deb). Run the installer, and the app will launch silently.",
   },
   {
     number: "2",
-    title: "Create Master Password",
-    description: "Launch the app and create a master password (minimum 12 characters). This password encrypts all your data.",
+    title: "Setup Your Environment",
+    description: "Create a secure master password (minimum 12 chars). Configure your API keys (OpenAI, Groq, or compatible) in Settings.",
   },
   {
     number: "3",
-    title: "Configure AI Provider",
-    description: "Add your OpenAI API key, or set up Ollama for local AI models. You can also use any OpenAI-compatible endpoint.",
+    title: "Master Core Shortcuts",
+    description: "Ctrl+Alt+H to Show/Hide app. Ctrl+Alt+V to Ghost Type clipboard. Ctrl+Alt+O for OCR Selection Overlay.",
   },
   {
     number: "4",
-    title: "Start Chatting",
-    description: "Begin your secure conversations! All your chats are automatically encrypted and stored locally on your computer.",
+    title: "Utilize Voice Modes",
+    description: "Use 'Mine Mode' to transcribe your microphone, or 'Yours Mode' to capture system audio for real-time interview context.",
   },
   {
     number: "5",
-    title: "Quick Hide/Show",
-    description: "Use CTRL+SHIFT+H to instantly hide or show the app. Perfect for quick privacy when needed.",
+    title: "Deploy Ghost Typer",
+    description: "Copy AI-generated text, click your destination window, and press Ctrl+Alt+V to human-type the text past detection.",
   },
 ];
 
