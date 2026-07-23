@@ -79,17 +79,26 @@ export default async function Download() {
                                 
                                 <div className={styles.assetsList}>
                                     {release.assets?.length > 0 ? (
-                                        release.assets.map((asset: any) => (
-                                            <a
-                                                key={asset.id}
-                                                href={asset.browser_download_url}
-                                                download
-                                                className={styles.downloadAssetButton}
-                                            >
-                                                <DownloadIcon className="w-5 h-5" />
-                                                Download {asset.name}
-                                            </a>
-                                        ))
+                                        release.assets.map((asset: any) => {
+                                            let osLabel = asset.name;
+                                            if (asset.name.endsWith('.exe')) osLabel = "Windows (.exe)";
+                                            else if (asset.name.endsWith('.deb')) osLabel = "Linux (.deb)";
+                                            else if (asset.name.endsWith('.rpm')) osLabel = "Linux (.rpm)";
+                                            else if (asset.name.endsWith('.AppImage')) osLabel = "Linux (AppImage)";
+                                            else if (asset.name.endsWith('.dmg')) osLabel = "macOS (.dmg)";
+                                            
+                                            return (
+                                                <a
+                                                    key={asset.id}
+                                                    href={asset.browser_download_url}
+                                                    download
+                                                    className={styles.downloadAssetButton}
+                                                >
+                                                    <DownloadIcon className="w-5 h-5" />
+                                                    Download {osLabel}
+                                                </a>
+                                            );
+                                        })
                                     ) : (
                                         <>
                                             <a
@@ -125,7 +134,7 @@ export default async function Download() {
                         <li className={styles.reqItem}>
                             <CheckCircle2 className={styles.icon} />
                             <div>
-                                <strong className={styles.strongText}>Operating System:</strong> Windows 10 or Windows 11
+                                <strong className={styles.strongText}>Operating System:</strong> Windows 10/11, Ubuntu 22.04+, Fedora, or Arch Linux
                             </div>
                         </li>
                         <li className={styles.reqItem}>
@@ -137,7 +146,7 @@ export default async function Download() {
                         <li className={styles.reqItem}>
                             <CheckCircle2 className={styles.icon} />
                             <div>
-                                <strong className={styles.strongText}>Disk Space:</strong> 100MB+ free space
+                                <strong className={styles.strongText}>Disk Space:</strong> 150MB+ free space
                             </div>
                         </li>
                     </ul>
@@ -145,9 +154,9 @@ export default async function Download() {
 
                 <div className={styles.noteBox}>
                     <p className={styles.noteText}>
-                        <strong className={styles.strongText}>Important:</strong> This is a Windows desktop application, not a web app.
-                        After downloading, install it on your Windows computer and run it from your desktop or Start menu.
-                        All your data is stored locally on your computer and never sent to any server except your configured AI provider.
+                        <strong className={styles.strongText}>Important:</strong> This is a cross-platform desktop application, not a web app.
+                        After downloading, install it on your machine and run it natively. 
+                        All your data is stored locally on your computer and is never sent to any central server, ensuring absolute privacy.
                     </p>
                 </div>
             </div>

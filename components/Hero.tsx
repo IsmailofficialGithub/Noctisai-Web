@@ -42,6 +42,12 @@ export default function Hero() {
                     >
                         Download for Windows & Linux
                     </a>
+                    <a
+                        href="/guide"
+                        className={styles.secondaryButton}
+                    >
+                        Read Master Guide
+                    </a>
                 </div>
 
                 <p className={styles.footer}>

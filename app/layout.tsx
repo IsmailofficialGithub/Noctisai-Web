@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -120,10 +122,14 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable}`}
-            >
-                {children}
+            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+                <div className="layoutWrapper">
+                    <Navbar />
+                    <main className="mainContent">
+                        {children}
+                    </main>
+                    <Footer />
+                </div>
             </body>
         </html>
     );
