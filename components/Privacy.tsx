@@ -12,6 +12,13 @@ export default function Privacy() {
                     Your privacy is not an afterthought—it's our foundation
                 </p>
 
+                <div className={styles.trustBoxTop}>
+                    <p className={styles.trustText}>
+                        <strong className={styles.strongText}>Trust is earned, not assumed.</strong> We've built Noctisai
+                        with privacy and security as core principles, not features added later. Your conversations are yours alone.
+                    </p>
+                </div>
+
                 <div className={styles.grid}>
                     <div className={styles.card}>
                         <div className={styles.iconContainer}>
@@ -62,13 +69,6 @@ export default function Privacy() {
                             Advanced OS-level process masking and content protection prevents screen capture tools (like Zoom, Teams, OBS) from recording your conversations.
                         </p>
                     </div>
-                </div>
-
-                <div className={styles.trustBox}>
-                    <p className={styles.trustText}>
-                        <strong className={styles.strongText}>Trust is earned, not assumed.</strong> We've built Noctisai
-                        with privacy and security as core principles, not features added later. Your conversations are yours alone.
-                    </p>
                 </div>
             </div>
         </section>

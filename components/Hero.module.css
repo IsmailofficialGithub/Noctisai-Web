@@ -12,7 +12,7 @@
 .heroBackground {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.2), rgba(88, 28, 135, 0.1), transparent);
+    background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.2), rgba(0, 82, 204, 0.1), transparent);
 }
 
 .patternContainer {
@@ -56,7 +56,7 @@
     /* 5xl */
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #60a5fa, #c084fc, #60a5fa);
+    background: linear-gradient(to right, #60a5fa, #6fb1fc, #60a5fa);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -95,7 +95,7 @@
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
-    background-color: #2563eb;
+    background-color: #00b0d0;
     /* blue-600 */
     color: white;
     font-size: 1.125rem;
@@ -109,7 +109,7 @@
 }
 
 .button:hover {
-    background-color: #1d4ed8;
+    background-color: #008ba8;
     /* blue-700 */
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     transform: scale(1.05);

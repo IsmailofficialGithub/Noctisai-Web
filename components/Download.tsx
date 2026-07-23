@@ -14,8 +14,24 @@ async function getReleases() {
     }
 }
 
+async function getVersionInfo() {
+    try {
+        const res = await fetch('https://raw.githubusercontent.com/IsmailofficialGithub/interview-cracker/main/version.json', {
+            next: { revalidate: 60 }
+        });
+        if (!res.ok) return null;
+        return res.json();
+    } catch (error) {
+        console.error('Error fetching version info:', error);
+        return null;
+    }
+}
+
 export default async function Download() {
-    const releases = await getReleases();
+    const [releases, versionInfo] = await Promise.all([
+        getReleases(),
+        getVersionInfo()
+    ]);
 
     return (
         <section id="download" className={styles.section}>
@@ -26,6 +42,16 @@ export default async function Download() {
                 <p className={styles.subtitle}>
                     Get the latest application releases and start using our tool today.
                 </p>
+
+                {versionInfo && (
+                    <div className={styles.versionBanner}>
+                        <div className={styles.versionHeader}>
+                            <span className={styles.latestVersionBadge}>Latest: v{versionInfo.latest_version}</span>
+                            <span className={styles.minVersion}>Min Supported: v{versionInfo.min_supported_version}</span>
+                        </div>
+                        <p className={styles.versionNotes}>{versionInfo.release_notes}</p>
+                    </div>
+                )}
 
                 <div className={styles.releasesContainer}>
                     {releases.length === 0 ? (
