@@ -20,14 +20,15 @@ export const metadata: Metadata = {
         "private AI chat",
         "secure AI chat",
         "encrypted AI chat",
-        "Windows AI chat",
-        "desktop AI application",
+        "Ghost Typer",
+        "AI interview assistant",
+        "AI meeting assistant",
         "zero-knowledge encryption",
         "screen sharing protection",
-        "privacy AI",
+        "transparent OCR",
         "local AI chat",
-        "Ollama chat",
-        "OpenAI desktop app",
+        "Windows AI chat",
+        "Linux AI assistant",
     ],
     authors: [{ name: "Noctisai" }],
     creator: "Noctisai",
@@ -50,17 +51,17 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: "/logo.png",
+                url: "/logo-neon.png",
                 width: 1200,
                 height: 630,
-                alt: "Noctisai - Secure AI Chat",
+                alt: "Noctisai - Stealthy, Secure AI Assistant",
             },
         ],
     },
     icons: {
-        icon: "/logo.png",
-        shortcut: "/logo.png",
-        apple: "/logo.png",
+        icon: "/logo-neon.png",
+        shortcut: "/logo-neon.png",
+        apple: "/logo-neon.png",
     },
     twitter: {
         card: "summary_large_image",
@@ -96,8 +97,29 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Noctisai",
+      "operatingSystem": "Windows, Linux",
+      "applicationCategory": "UtilitiesApplication",
+      "image": "https://noctisai.com/logo-neon.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A stealthy, secure, and advanced AI assistant for interviews and meetings with zero-knowledge encryption."
+    };
+
     return (
         <html lang="en">
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable}`}
             >

@@ -15,7 +15,7 @@ export default function Hero() {
             <div className={styles.content}>
                 <div className={styles.logoContainer}>
                     <Image
-                        src="/logo.png"
+                        src="/logo-neon.png"
                         alt="Noctisai Logo"
                         width={200}
                         height={200}
