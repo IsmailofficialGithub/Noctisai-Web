@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import HintBanner from "@/components/HintBanner";
+import LiveDemo from "@/components/LiveDemo";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Download from "@/components/Download";
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <Hero />
       <HintBanner />
+      <LiveDemo />
       <Features />
       <HowItWorks />
       <Download />
